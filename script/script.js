@@ -5,6 +5,9 @@ canvas.height=window.innerHeight;
 let particlesArray=[];
 let hue=0;
 
+    ctx.fillStyle='rgba(0,0,0,1)';
+    ctx.fillRect(0,0,canvas.width,canvas.height);
+
 window.addEventListener('resize', () => {
     canvas.width=window.innerWidth;
     canvas.height=window.innerHeight;
@@ -78,7 +81,7 @@ function handleParticles(){
 function animate()
 {
     //ctx.clearRect(0,0,canvas.width,canvas.height);
-    ctx.fillStyle='rgba(0,0,0,0.01)';
+    ctx.fillStyle='rgba(0,0,0,.009)';
     ctx.fillRect(0,0,canvas.width,canvas.height);
     handleParticles();
     hue+=5;
